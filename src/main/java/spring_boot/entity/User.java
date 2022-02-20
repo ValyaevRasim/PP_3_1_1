@@ -1,4 +1,4 @@
-package spring_boot.PP_3_1_1.entity;
+package spring_boot.entity;
 
 import javax.persistence.*;
 

@@ -1,12 +1,11 @@
-package spring_boot.PP_3_1_1.controller;
+package spring_boot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import spring_boot.PP_3_1_1.entity.User;
-import spring_boot.PP_3_1_1.service.UserService;
-
+import spring_boot.entity.User;
+import spring_boot.service.UserService;
 
 import java.util.List;
 
@@ -27,10 +26,9 @@ public class MyController {
     public String showAllUsers(Model model) {
         System.out.println("showAllUsers/allUsers");
         List<User> allUsers = userService.getAllUsers();
-        model.addAttribute("allUsers", allUsers);
+        model.addAttribute("userList", allUsers);
         return "allUsers";
     }
-
 
     // добавление нового пользователяю, используем 2 метода
     @RequestMapping("/new")
@@ -63,7 +61,7 @@ public class MyController {
         return "redirect:/";
     }
 
-//    удаление пользователя, используем 2 метода
+    //    удаление пользователя, используем 2 метода
     @GetMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable("id") long id){
         System.out.println("updateUser/updateUser");

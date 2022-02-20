@@ -1,6 +1,6 @@
-package spring_boot.PP_3_1_1.service;
+package spring_boot.service;
 
-import spring_boot.PP_3_1_1.entity.User;
+import spring_boot.entity.User;
 
 import java.util.List;
 

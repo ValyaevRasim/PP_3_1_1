@@ -1,10 +1,10 @@
-package spring_boot.PP_3_1_1.service;
+package spring_boot.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import spring_boot.PP_3_1_1.dao.UserDao;
-import spring_boot.PP_3_1_1.entity.User;
+import spring_boot.dao.UserDao;
+import spring_boot.entity.User;
 
 import java.util.List;
 

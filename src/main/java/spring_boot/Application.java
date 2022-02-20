@@ -1,13 +1,13 @@
-package spring_boot.PP_3_1_1;
+package spring_boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Pp311IoApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Pp311IoApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

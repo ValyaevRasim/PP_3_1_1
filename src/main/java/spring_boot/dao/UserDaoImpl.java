@@ -1,11 +1,10 @@
-package spring_boot.PP_3_1_1.dao;
+package spring_boot.dao;
 
 import org.springframework.stereotype.Repository;
-import spring_boot.PP_3_1_1.entity.User;
+import spring_boot.entity.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
@@ -15,8 +14,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> getAllUsers() {
-        List<User> list = entityManager.createQuery("Select usr from User usr", User.class).getResultList();
-        return list;
+        return entityManager.createQuery("Select usr from User usr", User.class).getResultList();
     }
 
     @Override

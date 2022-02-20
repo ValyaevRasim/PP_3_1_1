@@ -20,10 +20,10 @@
         <tr>
 
             <td th:utext="${state.index+1}">index</td>
-            <td th:utext="${msg.id}">index</td>
-            <td th:utext="${msg.firstName}">index</td>
-            <td th:utext="${msg.getLastName()}">index</td>
-            <td th:utext="${msg.age}">index</td>
+            <td th:utext="${msg.getId()}">index</td>
+            <td th:utext="${msg.getFirstname()}">index</td>
+            <td th:utext="${msg.getLastname()}">index</td>
+            <td th:utext="${msg.getAge()}">index</td>
             <td>
                 <form th:action="@{'updateUser/'+${msg.getId()}}">
                     <input type="submit" class="buttonEdit" value="обновить"/>
