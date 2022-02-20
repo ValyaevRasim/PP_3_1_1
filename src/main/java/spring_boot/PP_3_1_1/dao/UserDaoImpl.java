@@ -45,8 +45,8 @@ public class UserDaoImpl implements UserDao {
         User user = getUserById(id);
         System.out.println("UserDaoImpl");
         System.out.println(user.toString());
-        user.setFirstName(userUpdate.getFirstName());
-        user.setLastName(userUpdate.getLastName());
+        user.setFirstname(userUpdate.getFirstname());
+        user.setLastname(userUpdate.getLastname());
         user.setAge(userUpdate.getAge());
     }
 
