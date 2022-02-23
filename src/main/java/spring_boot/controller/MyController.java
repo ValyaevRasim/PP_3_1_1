@@ -41,7 +41,7 @@ public class MyController {
     @PostMapping()
     public String createNewUser(@ModelAttribute("user") User user) {
         System.out.println("createNewUser");
-        userService.save(user);
+        userService.saveUser(user);
         return "redirect:/";
     }
 
@@ -55,10 +55,9 @@ public class MyController {
     }
 
     @RequestMapping("/{id}")
-    public String edit(@PathVariable("id") long id, User userEdit) {
+    public String edit(@ModelAttribute("user") User user) {
         System.out.println("edit");
-//        userService.updateUser(id,userEdit);
-        userService.save(userEdit);
+        userService.saveUser(user);
         return "redirect:/";
     }
 
